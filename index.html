@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 01 - Calculadora</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            font-size: 62.5%;
+        }
+
+        body {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5vw;
+
+            transform: translateY(40vh);
+
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        }
+
+        h1, h2, h3 {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        header {
+            max-width: 45vw;
+        }
+
+        h1 {
+            color: white;
+            filter: drop-shadow(0 0 2px rgba(255, 255, 255, .3));
+            font-weight: 200;
+
+            font-size: 4.5rem;
+
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            color: #f3f3f3;
+            font-weight: 500;
+            font-size: 2.5rem;
+        }
+
+        main {
+            background-color: rgba(9, 9, 121, .7);
+            padding: 1rem 5rem;
+            border-radius: .5rem;
+            box-shadow: 0 0 15px rgba(9, 9, 121, .5);
+            color: white;
+            width: 50rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .calc-wrapper {
+            display: flex;
+            justify-content: space-between;
+            /* gap: 1rem; */
+
+            margin: 1rem 0 2rem;
+        }
+
+        /* Chromium */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+        
+        input {
+            width: 12.5rem;
+            border: none;
+            border-radius: 3px;
+        }
+        
+        input[type=number] {
+            /* Firefox */
+            -moz-appearance: textfield;
+            appearance: none;
+            background-color: rgba(255, 255, 255, .9);
+            
+            font-family: "Space Mono", sans-serif;
+            font-size: 1.25rem;
+            color: #3d3d3d;
+            padding: 0 5px;
+        }
+
+        input[type=number]:focus {
+            background-color: white;
+            outline: 2px solid #00DBDE;
+        }
+
+        h4, p {
+            font-family: "Space Mono", sans-serif;
+        }
+
+        h4 {
+            color: #88ebec;
+        }
+
+        input[type=button] {
+            background-color: #ae00ff;
+            color: white;
+
+            text-transform: uppercase;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.4rem;
+            cursor: pointer;
+
+            transition: 250ms ease;
+        }
+
+        input[type=button]:hover {
+            background-color: white;
+            color: #ae00ff;
+            outline: 1px solid #ae00ff;
+            letter-spacing: 1px;
+        }
+
+        .res-wrapper {
+            display: flex;
+            gap: .5rem;
+            font-size: 1.25rem;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Stage 4 | Exercício 1</h1>
+        <h2>Calculadora em JavaScript a partir de dois números.</h2>
+    </header>
+
+    <main>
+        <h3>Por favor insira dois números abaixo:</h3>
+        <div class="calc-wrapper">
+            <input type="number" name="txtn1" id="txtn1">
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value="Calcular" id="calculate">
+        </div>
+        <div id="res">
+            <h3>Resultados:</h3>
+            <div class="res-wrapper">
+                <h4>Soma:</h4>
+                <p id="res-sum">
+                </p>
+            </div>
+            <div class="res-wrapper">
+                <h4>Subtração:</h4>
+                <p id="res-min">
+                </p>
+            </div>
+            <div class="res-wrapper">
+                <h4>Multiplicação:</h4>
+                <p id="res-mul">
+                </p>
+            </div>
+            <div class="res-wrapper">
+                <h4>Divisão:</h4>
+                <p id="res-div">
+                </p>
+            </div>
+            <div class="res-wrapper">
+                <h4>Resto da divisão:</h4>
+                <p id="res-divresto">
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
