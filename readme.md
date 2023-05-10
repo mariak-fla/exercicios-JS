@@ -1,5 +1,5 @@
 # Exercícios de JavaScript
-*PT-BR:* Exercícios simples em JavaScript para praticar conforme aprendo. 😊
+*PT-BR:* Exercícios simples em JavaScript para praticar conforme aprendo. 😊<br>
 *EN-US:* Simple practice exercises I made while learning JavaScript. 😊
 
 ## Desafio 5: Aula 04 | Rocketseat Explorer 🚀
