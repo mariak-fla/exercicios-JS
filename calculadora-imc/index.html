@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="js/script.js" defer type="module"></script>
+</head>
+<body>
+    <div class="alert-error">
+        Digite somente números
+    </div>
+
+    <div class="container">
+        <main class="card">
+            <form>
+                <h1 class="title">Cálculo de IMC</h1>
+
+                <div class="input-wrapper">
+                    <label for="weight">Peso (kg)</label>
+                    <input 
+                    type="text" 
+                    id="weight"
+                    placeholder="50">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="height">Altura (cm)</label>
+                    <input 
+                    type="text" 
+                    id="height"
+                    placeholder="160">
+                </div>
+
+                <button type="submit">
+                    Calcular IMC
+
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.1685 6.26205L12.3589 6.26213M12.3589 6.26213L7.64488 1.54808M12.3589 6.26213L7.64488 10.9762" stroke="white" stroke-width="1.20972" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </button>
+            </form>
+        </main>
+    </div>
+
+    <div class="modal-wrapper">
+        <div class="modal card">
+            <h2 class="title">
+                <button class="close">&times;</button>
+                <span></span>
+            </h2>
+        </div>
+    </div>
+</body>
+</html>
