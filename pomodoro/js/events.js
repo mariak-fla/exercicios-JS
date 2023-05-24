@@ -42,13 +42,13 @@ export default function({controls, timer, sound}) {
         soundOnBtn.classList.toggle('hide')
         soundOffBtn.classList.toggle('hide')
     
-        sound.bgAudio.play()
+        sound.bgAudio.pause()
     })
     
     soundOffBtn.addEventListener('click', () => {
         soundOnBtn.classList.toggle('hide')
         soundOffBtn.classList.toggle('hide')
         
-        sound.bgAudio.pause()
+        sound.bgAudio.play()
     })
 }
