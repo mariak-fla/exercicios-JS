@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 85;
+
+    --bg-color: #121214;
+    --primary-color: hsl(var(--hue), 81%, 44%);
+    --primary-color-transparent: hsla(var(--hue), 81%, 44%, 0.15);
+
+    font-size: 62.5%;
+}
+
+::selection {
+    background-color: hsla(var(--hue), 81%, 50%, 0.5);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: white;
+
+    font-family: "Inter", sans-serif;
+
+    display: grid;
+    min-height: 100vh;
+}
+
+button {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+button svg {
+    width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
+}
+
+button.set svg {
+    width: clamp(3rem, 2rem + 10vw, 5.75rem);
+}
+
+svg path {
+    fill: var(--primary-color);
+}
+
+button.set {
+    padding-bottom: .5rem;
+}
+
+button.set svg path {
+    fill: white;
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    align-self: end;
+    justify-self: center;
+}
+
+#timer {
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+
+    display: flex;
+    margin: 0 auto 1.6rem;
+}
+
+#controls {
+    background-color: var(--primary-color-transparent);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    
+    border-radius: 999rem;
+    margin: auto;
+    
+    width: clamp(10rem, 10rem + 30vw, 23rem);
+    height: clamp(8rem, 5rem + 10vw, 11rem);
+}
+
+footer {
+    align-self: end;
+    justify-self: end;
+    padding: 0 4rem 3.2rem 0;
+}

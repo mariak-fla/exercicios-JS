@@ -23,6 +23,13 @@ Neste desafio, a proposta era criar uma calculadora de IMC.
 <br><br>
 🔗 [Clique aqui para ver o site!](https://mariak-fla.github.io/exercicios-JS/calculadora-imc)
 
+## Desafio 8: Stage 05 | Rocketseat Explorer 🚀
+![preview](.github/pomodoro.png)<br>
+Desafio de Temporizador Pomodoro em JavaScript do Stage 5 do curso [Explorer](https://app.rocketseat.com.br/explorer) da Rocketseat.<br>
+Neste desafio, a proposta era criar um temporizador do estilo Pomodoro, em que o usuário determine uma quantia de minutos no início e um alarme toque ao final. Além disto, o alarme conta com controles de pausa e reinício, som, e música de fundo.
+<br><br>
+🔗 [Clique aqui para ver o site!](https://mariak-fla.github.io/exercicios-JS/pomodoro)
+
 ## ⚙️ Tecnologias
 
 - JavaScript
