@@ -1,13 +1,13 @@
 export default function() {
     const btnPressAudio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true")
     const kitchenTimer = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
-    const forestBgAudio = new Audio("./js/bgAudio/floresta.wav");
+    const forestBgAudio = new Audio("https://github.com/mariak-fla/exercicios-JS/blob/main/pomodoro-plus/js/bgAudio/Floresta.wav?raw=true");
     forestBgAudio.loop = true
-    const rainBgAudio = new Audio("./js/bgAudio/chuva.wav");
+    const rainBgAudio = new Audio("https://github.com/mariak-fla/exercicios-JS/blob/main/pomodoro-plus/js/bgAudio/Chuva.wav?raw=true");
     rainBgAudio.loop = true
-    const cafeBgAudio = new Audio("./js/bgAudio/cafeteria.wav");
+    const cafeBgAudio = new Audio("https://github.com/mariak-fla/exercicios-JS/blob/main/pomodoro-plus/js/bgAudio/Cafeteria.wav?raw=true");
     cafeBgAudio.loop = true
-    const fireBgAudio = new Audio("./js/bgAudio/lareira.wav");
+    const fireBgAudio = new Audio("https://github.com/mariak-fla/exercicios-JS/blob/main/pomodoro-plus/js/bgAudio/Lareira.wav?raw=true");
     fireBgAudio.loop = true
     
     let isPlaying = {

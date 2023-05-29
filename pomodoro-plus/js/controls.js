@@ -31,10 +31,7 @@ export default function Controls({
 
     function getMinutes() {
         let newMinutes = prompt("Quantos minutos?")
-        if (!newMinutes) {
-            alert("Apenas números, mínimo de 1min.")
-            return false
-        } else if (0 >= newMinutes) {
+        if (!newMinutes || 0 >= newMinutes) {
             alert("Apenas números, mínimo de 1min.")
             return false
         }
