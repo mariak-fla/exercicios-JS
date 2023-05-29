@@ -28,8 +28,18 @@ export default function Controls({
         if (!newMinutes) {
             return false
         }
+        
+        let parsedMinutes = parseFloat(newMinutes);
 
-        return newMinutes
+        if (!isNaN(parsedMinutes)) {
+            if (parsedMinutes % 1 !== 0) {
+                return Math.floor(parsedMinutes) * 60 + Math.floor((parsedMinutes % 1) * 60);
+            } else {
+                return parsedMinutes * 60;
+            }
+        } else {
+            return false;
+        }
     }
 
     return {
