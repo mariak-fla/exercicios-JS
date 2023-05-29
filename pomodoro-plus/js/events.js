@@ -51,6 +51,7 @@ export default function({controls, timer, sound}) {
         const newMinutes = currentMinutes + 5
         timer.updateMinutes(newMinutes)
         timer.updateDisplay(newMinutes)
+        sound.pressBtn();
     })
     
     minusBtn.addEventListener('click', () => {
@@ -58,6 +59,7 @@ export default function({controls, timer, sound}) {
         const newMinutes = Math.max(currentMinutes - 5, 0)
         timer.updateMinutes(newMinutes)
         timer.updateDisplay(newMinutes)
+        sound.pressBtn();
     })
     
     darkModeBtn.addEventListener('click', () => {
