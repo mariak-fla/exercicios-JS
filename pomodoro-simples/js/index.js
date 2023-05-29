@@ -9,13 +9,25 @@ import {
     setBtn,
     minutesDisplay,
     secondsDisplay,
+    darkModeBtn,
+    lightModeBtn,
+    timerDisplay,
+    bgColor,
+    soundCards,
+    svgs,
 } from "./elements.js"
 
 const controls = Controls({
     playBtn,
     pauseBtn,
     setBtn,
-    stopBtn
+    stopBtn,
+    darkModeBtn,
+    lightModeBtn,
+    timerDisplay,
+    bgColor,
+    soundCards,
+    svgs,
 })
 
 const timer = Timer({

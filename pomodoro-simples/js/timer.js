@@ -1,10 +1,12 @@
 import Sounds from "./sounds.js"
 
-export default function Timer({
+export default function Timer(
+    {
     minutesDisplay,
     secondsDisplay,
     resetControls
-}) {
+    }
+) {
     let minutes = Number(minutesDisplay.textContent)
     let timerTimeOut
 
