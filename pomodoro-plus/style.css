@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-1: #1F2937;
+    --light-2: #4B5563;
+    --light-3: #D1D5DB;
+    --light-bg: white;
+
+    --dark-1: white;
+    --dark-2: #D4D4D8;
+    --dark-3: #3F3F46;
+    --dark-bg: #18181B;
+
+    --hue: 350;
+    --main-color: hsl(var(--hue), 95%, 71%);
+    --main-color-transparent: hsla(var(--hue), 95%, 71%, 50%);
+
+    font-size: 62.5%;
+}
+
+::selection {
+    background-color: var(--main-color-transparent);
+}
+
+.hide {
+    display: none;
+}
+
+.sound-card.selected {
+    background-color: var(--main-color-transparent);
+}
+
+.sound-card:not(.selected).darkmode {
+    background-color: var(--dark-3);
+}
+
+.sound-card:not(.selected).lightmode {
+    background-color: var(--light-3);
+}
+
+svg {
+    width: min(10vw, 5rem);
+    stroke: var(--dark-2);
+}
+
+button.dark svg {
+    stroke: var(--light-2);
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    padding: min(5vw, 5rem);
+
+    background-color: var(--dark-bg);
+    height: 100vh;
+    /* display: grid; */
+}
+
+header {
+    text-align: right;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 5vh;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#pomodoro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timer {
+    font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+    color: var(--dark-1);
+    font-weight: 800;
+
+    margin: 0 auto 1.6rem;
+    text-align: center;
+    min-width: 20vw;
+}
+
+#controls {  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    
+    margin: auto;
+    
+    width: clamp(10rem, 10rem + 30vw, 23rem);
+}
+
+#sound-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.sound-card {
+    background-color: var(--dark-3);
+    padding: 3rem 4rem;
+    border-radius: 0 2rem;
+    width: fit-content;
+
+    text-align: center;
+}
+
+/* .slider {
+    position: relative;
+    width: 20rem;
+    height: 2rem;
+}
+
+.slider input {
+    position: absolute;
+    top: 0;
+} */
+
+@media (min-width: 700px) { 
+    main {
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+    }
+}
