@@ -34,13 +34,13 @@
     background-color: var(--main-color-transparent);
 }
 
-/* .sound-card.darkmode {
+.sound-card:not(.selected).darkmode {
     background-color: var(--dark-3);
 }
 
-.sound-card.lightmode {
+.sound-card:not(.selected).lightmode {
     background-color: var(--light-3);
-} */
+}
 
 svg {
     width: min(10vw, 5rem);

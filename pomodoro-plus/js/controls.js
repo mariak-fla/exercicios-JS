@@ -51,17 +51,12 @@ export default function Controls({
         bgColor.style.backgroundColor = "var(--dark-bg)"
 
         soundCards.forEach(function(soundCard) {
-            soundCard.style.backgroundColor = "var(--dark-3)";
-          });
+            soundCard.classList.toggle('lightmode')
+            soundCard.classList.toggle('darkmode')
+        });
         svgs.forEach(function(svg) {
             svg.style.setProperty('stroke', 'var(--dark-2)');
           });
-
-        /* const selectedButton = document.querySelector('.sound-card.selected button');
-        if (selectedButton) {
-            selectedButton.parentNode.classList.remove('selected');
-            selectedButton.parentNode.classList.add('selected');
-        } */
     }
 
     function lightMode() {
@@ -71,36 +66,13 @@ export default function Controls({
         bgColor.style.backgroundColor = "var(--light-bg)"
 
         soundCards.forEach(function(soundCard) {
-            soundCard.style.backgroundColor = "var(--light-3)";
-          });
+            soundCard.classList.toggle('lightmode')
+            soundCard.classList.toggle('darkmode')
+        });
         svgs.forEach(function(svg) {
             svg.style.setProperty('stroke', 'var(--light-2)');
         });
-
-        /* const selectedButton = document.querySelector('.sound-card.selected button');
-        if (selectedButton) {
-            selectedButton.parentNode.classList.remove('selected');
-            selectedButton.parentNode.classList.add('selected');
-        } */
     }
-
-     /* function updateButtonBackground(selectedButton) {
-        soundCards.forEach((card) => {
-            const button = card.querySelector('button');
-            if (button === selectedButton) {
-                card.classList.add('selected');
-            } else {
-                card.classList.remove('selected');
-            }
-        });
-    }
-
-    function updateButtonBackgroundOnModeSwitch() {
-        const selectedButton = document.querySelector('.sound-card.selected button');
-        if (selectedButton) {
-            updateButtonBackground(selectedButton);
-        }
-    }  */
 
     return {
         reset,
