@@ -30,19 +30,22 @@ export default function Controls({
     }
 
     function getMinutes() {
-        let input = prompt("Quantos minutos?");
-        if (!input) {
-          return false;
+        let newMinutes = prompt("Quantos minutos?")
+        if (!newMinutes) {
+            alert("Apenas números, mínimo de 1min.")
+            return false
+        } else if (0 >= newMinutes) {
+            alert("Apenas números, mínimo de 1min.")
+            return false
         }
-      
-        let parsedMinutes = parseFloat(input);
-      
-        if (!isNaN(parsedMinutes)) {
-          return Math.floor(parsedMinutes * 60);
+
+        if (!isNaN(newMinutes)) {
+            return newMinutes;
         } else {
-          return false;
+            alert("Apenas números, mínimo de 1min.")
+            return false
         }
-      }
+    }
 
     function darkMode() {
         darkModeBtn.classList.toggle('hide')
